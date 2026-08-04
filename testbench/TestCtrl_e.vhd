@@ -49,6 +49,9 @@ library osvvm_pcie ;
 --use work.OsvvmTestCommonPkg ;
 
 entity TestCtrl is
+  generic (
+    STOP_AT_TIME_ZERO : boolean := FALSE
+  ) ;
   port (
     -- Global Signal Interface
     Clk            : In    std_logic ;

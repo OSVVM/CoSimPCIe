@@ -46,6 +46,9 @@ library osvvm_pcie ;
   context osvvm_pcie.PcieContext ;
 
 entity TbPcie is
+  generic (
+    STOP_AT_TIME_ZERO : boolean := FALSE
+  ) ;
 end entity TbPcie ;
 
 architecture TestHarness of TbPcie is
@@ -91,6 +94,9 @@ architecture TestHarness of TbPcie is
   ) ;
 
   component TestCtrl is
+    generic (
+      STOP_AT_TIME_ZERO : boolean := FALSE
+    ) ;
     port (
       -- Global Signal Interface
       Clk                 : In    std_logic ;
@@ -363,6 +369,9 @@ end generate ;
   ------------------------------------------------------------
   TestCtrl_1 : TestCtrl
   ------------------------------------------------------------
+  generic map (
+    STOP_AT_TIME_ZERO => STOP_AT_TIME_ZERO
+  )
   port map (
     -- Globals
     Clk            => Clk,
