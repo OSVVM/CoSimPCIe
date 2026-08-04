@@ -1,4 +1,4 @@
-timestamp=1773392815421
+timestamp=1785228356838
 
 [~A]
 C:/altera/ver/quartus/eda/sim_lib/sgate.v=0*5340*10702
@@ -8,147 +8,147 @@ Version=74
 
 [~MFT]
 0=22|0sgate_ver.mgf|10702|0
-1=20|1sgate_ver.mgf|42911|0
-3=40|3sgate_ver.mgf|54544|0
+1=20|1sgate_ver.mgf|44015|0
+3=40|3sgate_ver.mgf|54543|0
 
 [$root]
 A/$root=22|||1*0
 BinW64/$root=3*0
 SLP=3*115
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|c73a565f2ade592f8ac1c68f484c9216641669635dd550339cda42b5704da16d
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|c73a565f2ade592f8ac1c68f484c921684c53f178b6f8cfe272c73314fd170a5
 
 [io_buf_opdrn]
-A/io_buf_opdrn=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|249|1*8880
-BinW64/io_buf_opdrn=3*9901
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|249
-SLP=3*10398
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|352d0d24d39edeb0abfb5e9e4764bc734280b2653aaa26fa75a24d0509412b8709408a5edbe9ef9d39630e87b29d1463
+A/io_buf_opdrn=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|249|1*9062
+BinW64/io_buf_opdrn=3*9900
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|249
+SLP=3*10397
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|352d0d24d39edeb0abfb5e9e4764bc734280b2653aaa26fa75a24d0509412b87532b620a1d8eb0c4e008bc12517ef5cb
 
 [io_buf_tri]
-A/io_buf_tri=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|221|1*7706
-BinW64/io_buf_tri=3*9056
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|221
-SLP=3*9618
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|bfdef75fc817d01b461539d0ed1d149476b0027d4c69ea6af6ffd28b0945d95ba344fbeffd6d5589e1ed3fca47a10822
+A/io_buf_tri=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|221|1*7890
+BinW64/io_buf_tri=3*9055
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|221
+SLP=3*9617
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|bfdef75fc817d01b461539d0ed1d149476b0027d4c69ea6af6ffd28b0945d95b53de8e807bd248661927a8c4682f0dcc
 
 [mux21]
-A/mux21=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|191|1*6303
-BinW64/mux21=3*8234
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|191
-SLP=3*8786
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|959acea00ed13aea6f5c6237bd5f200af74be2340e83174d1281805703096c24
+A/mux21=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|191|1*6479
+BinW64/mux21=3*8233
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|191
+SLP=3*8785
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|959acea00ed13aea6f5c6237bd5f200a4fb178346be8492e27f157d22e36b068
 
 [oper_add]
-A/oper_add=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|19|1*534
+A/oper_add=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|19|1*534
 BinW64/oper_add=3*199
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|19
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|19
 SLP=3*1884
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|5e62a9100ba189e5cc6b80d28da3fca62818afb70cf1f2f39ae611a8b84306902fc18d006385e268471dfbe78860dfcc
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|5e62a9100ba189e5cc6b80d28da3fca62818afb70cf1f2f39ae611a8b843069035332dc4ed507bce995d875043df937c
 
 [oper_addsub]
-A/oper_addsub=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|96|1*3164
+A/oper_addsub=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|96|1*3232
 BinW64/oper_addsub=3*2800
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|96
-SLP=3*6838
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|0366580054b31b9e65234391f2cbc5281e5292cf0faecda30ecbfa6c57a45f42ec851e3774771d1961c53a3851de1643
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|96
+SLP=3*6837
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|0366580054b31b9e65234391f2cbc5281e5292cf0faecda30ecbfa6c57a45f4282d0b852f2e3ad08f08fc2400a769f52
 
 [oper_bus_mux]
-A/oper_bus_mux=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|1073|1*40276
-BinW64/oper_bus_mux=3*50914
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|1073
-SLP=3*53133
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|ebb61cf53a419da92441aafa28d8c648f47ae9bb63ee924dd0b769661077e31dcf0d34c80f680a505e584bd94dc9a117
+A/oper_bus_mux=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|1073|1*41312
+BinW64/oper_bus_mux=3*50913
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|1073
+SLP=3*53132
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|ebb61cf53a419da92441aafa28d8c648f47ae9bb63ee924dd0b769661077e31d871dbf949d3ee135af319df36b98c7f4
 
 [oper_decoder]
-A/oper_decoder=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|1037|1*38448
-BinW64/oper_decoder=3*49685
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|1037
-SLP=3*50548
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|4136e173de9efd91a63050e71909df75f93d16a0d5e00bec5bc4259eea27da558939d83f7a7f4e207dce2b45a8339a0d
+A/oper_decoder=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|1037|1*39446
+BinW64/oper_decoder=3*49684
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|1037
+SLP=3*50547
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|4136e173de9efd91a63050e71909df75f93d16a0d5e00bec5bc4259eea27da558a720a18dd1b851c5b2acb3dabde2d5f
 
 [oper_div]
-A/oper_div=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|395|1*14927
-BinW64/oper_div=3*16545
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|395
-SLP=3*20026
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|330fae5dbb5c03c988f5bb041e22a2ea23b0775eaf50bfb15e1a083253ac86ef3905e7838d808c7c33858058f73a1e31
+A/oper_div=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|395|1*15253
+BinW64/oper_div=3*16544
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|395
+SLP=3*20025
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|330fae5dbb5c03c988f5bb041e22a2ea23b0775eaf50bfb15e1a083253ac86ef97cfd91510da2cc6fef0ac6bec77e6b1
 
 [oper_latch]
-A/oper_latch=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|1136|1*42911
-BinW64/oper_latch=3*53993
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|1136
-SLP=3*54544
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|eb3d1123ee7c1687dd58d460280bb935a13f858aa93b90b388a49a62f7159ced0d09b3f5413c526178331bb208ea1e8b
+A/oper_latch=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|1136|1*44015
+BinW64/oper_latch=3*53992
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|1136
+SLP=3*54543
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|eb3d1123ee7c1687dd58d460280bb935a13f858aa93b90b388a49a62f7159cedbe4cc2e837a33ed4fc50e4782462df3e
 
 [oper_left_shift]
-A/oper_left_shift=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|573|1*21139
-BinW64/oper_left_shift=3*25954
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|573
-SLP=3*28876
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|71c422a85696a1fcbf24867237898d3341a739c5e8b02c8ca27ed3a0ab8d2f5af2ccc54a64e71f7013903ff42a24df01
+A/oper_left_shift=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|573|1*21641
+BinW64/oper_left_shift=3*25953
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|573
+SLP=3*28875
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|71c422a85696a1fcbf24867237898d3341a739c5e8b02c8ca27ed3a0ab8d2f5ae5d39f2d864695cc914983cf0fba8318
 
 [oper_less_than]
-A/oper_less_than=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|854|1*31973
-BinW64/oper_less_than=3*40010
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|854
-SLP=3*43894
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|fff179fc4174dd7834e3fa08c59d06991eef974df35ec00b7e7bfa3c56882a0f0e8f3a6085f4c3d6735fbfe4f9cf39ae
+A/oper_less_than=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|854|1*32787
+BinW64/oper_less_than=3*40009
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|854
+SLP=3*43893
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|fff179fc4174dd7834e3fa08c59d06991eef974df35ec00b7e7bfa3c56882a0fed1f5127caa100264c5b872f6303629b
 
 [oper_mod]
-A/oper_mod=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|484|1*18033
-BinW64/oper_mod=3*21267
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|484
-SLP=3*24740
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|8d06492ec5a84430b1104196c414f923bf54c37a5929d0b0bef44c4f98f3ba18ec147798667873531967fffc15098ade
+A/oper_mod=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|484|1*18447
+BinW64/oper_mod=3*21266
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|484
+SLP=3*24739
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|8d06492ec5a84430b1104196c414f923bf54c37a5929d0b0bef44c4f98f3ba1897cfd91510da2cc6fef0ac6bec77e6b1
 
 [oper_mult]
-A/oper_mult=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|275|1*9989
-BinW64/oper_mult=3*10667
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|275
-SLP=3*13367
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|0072e9382ea4cdea8b1b737fbb4f9e4e39f08beca6824c6950d73c955418dcb75bc60988e47684b4196941bcfa98d8e3
+A/oper_mult=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|275|1*10169
+BinW64/oper_mult=3*10666
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|275
+SLP=3*13366
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|0072e9382ea4cdea8b1b737fbb4f9e4e39f08beca6824c6950d73c955418dcb761c763e8bd539246ada02789ceaf4563
 
 [oper_mux]
-A/oper_mux=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|946|1*34652
-BinW64/oper_mux=3*45256
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|946
-SLP=3*46698
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|c89ab02314426ee986b16abab2f788513de928612a4f300a0130f3a4cd5eb21f35a2b614fd64b6edbfba7eafab7391ac
+A/oper_mux=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|946|1*35554
+BinW64/oper_mux=3*45255
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|946
+SLP=3*46697
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|c89ab02314426ee986b16abab2f788513de928612a4f300a0130f3a4cd5eb21fb9fd5de7e1d6ec27090623a4da64fbc8
 
 [oper_right_shift]
-A/oper_right_shift=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|650|1*23745
-BinW64/oper_right_shift=3*30115
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|650
-SLP=3*33380
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|7c58ce914210dc94ea6d6a8e195da710d912761c59fa0921be3d3a3f08b1184830cc467c2d0e09ebd01f2191b86e4afc
+A/oper_right_shift=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|650|1*24335
+BinW64/oper_right_shift=3*30114
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|650
+SLP=3*33379
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|7c58ce914210dc94ea6d6a8e195da710d912761c59fa0921be3d3a3f08b118480995bb9c89a202591d4cc0c9765aa1d4
 
 [oper_rotate_left]
-A/oper_rotate_left=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|733|1*26369
-BinW64/oper_rotate_left=3*34756
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|733
-SLP=3*36510
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|39f7e0dc58f1ce088e7b8ce2ab3d650a856b62e7a27383d37cf6b11b55425eacc04087f41950951a8b184ccb9c1095b3
+A/oper_rotate_left=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|733|1*27047
+BinW64/oper_rotate_left=3*34755
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|733
+SLP=3*36509
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|39f7e0dc58f1ce088e7b8ce2ab3d650a856b62e7a27383d37cf6b11b55425eac107841f55b8c25671d45a4d5669770fa
 
 [oper_rotate_right]
-A/oper_rotate_right=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|794|1*29169
-BinW64/oper_rotate_right=3*37383
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|794
-SLP=3*39145
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|2e6d667c82c4dab82fb516a0502e04f0a7538104e3de42fa700a9c03df52c58b422502bfc9fb5fd905e87de300956bad
+A/oper_rotate_right=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|794|1*29915
+BinW64/oper_rotate_right=3*37382
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|794
+SLP=3*39144
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|2e6d667c82c4dab82fb516a0502e04f0a7538104e3de42fa700a9c03df52c58b2149af79f96284a6cc5ce3bc7d938e0b
 
 [oper_selector]
-A/oper_selector=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|992|1*36375
-BinW64/oper_selector=3*47318
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|992
-SLP=3*48909
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|0c150b6f9d8008307637009ff09db995b044b831af9bff36320050d0c566303ed0dc9d35be839372469e7b60d65a2b9a
+A/oper_selector=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|992|1*37315
+BinW64/oper_selector=3*47317
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|992
+SLP=3*48908
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|0c150b6f9d8008307637009ff09db995b044b831af9bff36320050d0c566303ed4e032ea4dd77a7209df57e5d41f09c3
 
 [tri_bus]
-A/tri_bus=22|C:/altera/ver/quartus/eda/sim_lib/sgate.v|348|1*13013
-BinW64/tri_bus=3*14213
-R=C:/altera/ver/quartus/eda/sim_lib/sgate.v|348
-SLP=3*15772
-Version=2025.10.126 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|506baf7110e51efd0a1be004a69b6cdd26527262ddaa47cb266f3a3c4d9b973a90fcee13cf187cb38f027a5707c9edcc
+A/tri_bus=22|../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|348|1*13281
+BinW64/tri_bus=3*14212
+R=../../../../../altera/ver/quartus/eda/sim_lib/sgate.v|348
+SLP=3*15771
+Version=2026.06.001 (Windows64)|000000ac789c658e5d0a80201084afe20584083acfb2c896e2fa83ca46b72f0323ea69e6fbe665b4cc7e519ad59e8aef998d233002d665400901a66e911b1504a1f2a2b07e04c7eac2709c9f5a376c34c01c865324f9b1add5fde47da77fb98613817f3e86|506baf7110e51efd0a1be004a69b6cdd26527262ddaa47cb266f3a3c4d9b973a14d0af5264af220a8c41130f4caafe3f
 
 [~U]
 $root=12|0*0|
