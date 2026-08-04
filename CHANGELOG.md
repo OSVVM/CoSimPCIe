@@ -11,6 +11,7 @@
 - New PCIe procedures for DLL/PHY traffic
 - Added new tests to verify and demonstrate the DLL and PHY features
 - Updated PCIe C model libraries to v1.9.4
+- Recompiled Altera libraries for Riviera-PRO 2026.06
 
 ## 2026.05 May 2026
 - Added a test bench using the Altera [_Cyclone V Hard IP for PCI Express_](https://docs.altera.com/r/docs/683494/17.1/cyclone-v-avalon-memory-mapped-avalon-mm-interface-for-pci-express-solutions-user-guide/datasheet) configured as a x1 PCIe PIPE interfaced Endpoint.
