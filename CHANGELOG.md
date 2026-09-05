@@ -2,10 +2,18 @@
 
 | Revision  |  Release Summary | 
 ------------|----------- 
-| ????.??   | Added test bench using 3rd party PCIe EP
+| 2026.08   | PCIe VC extended to drive DLLP and PHY traffic from MIT |
+| 2026.05   | Added test bench using 3rd party PCIe EP
 | 2026.01   | Initial release
 
-## ????.?? January 2026
+## 2026.08 August 2026
+- The PCIe VC now supports MIT commands to drive and receive DLL packets and PHY OS/TS traffic
+- New PCIe procedures for DLL/PHY traffic
+- Added new tests to verify and demonstrate the DLL and PHY features
+- Updated PCIe C model libraries to v1.9.4
+- Recompiled Altera libraries for Riviera-PRO 2026.06
+
+## 2026.05 May 2026
 - Added a test bench using the Altera [_Cyclone V Hard IP for PCI Express_](https://docs.altera.com/r/docs/683494/17.1/cyclone-v-avalon-memory-mapped-avalon-mm-interface-for-pci-express-solutions-user-guide/datasheet) configured as a x1 PCIe PIPE interfaced Endpoint.
 
 ## 2026.01 January 2026

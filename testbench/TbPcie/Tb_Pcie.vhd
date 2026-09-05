@@ -71,8 +71,13 @@ begin
 
     -- Wait for testbench initialization
     wait for 0 ns ;  wait for 0 ns ;
+
     TranscriptOpen ;
     SetTranscriptMirror(TRUE) ;
+    
+    if STOP_AT_TIME_ZERO then
+      std.env.stop ;
+    end if ;
 
     -- Wait for Design Reset
     wait until nReset = '1' ;

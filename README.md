@@ -1,28 +1,39 @@
 # PCIe Virtual Component
 
-<img src="images/pcie_vc_c_model.png" width=1000>
+<p align=center>
+<img src="images/pcie_vc_c_model.png" width=800>
+</p>
 
 ## VC Features
 
 PCIe GEN1/GEN2 verification component (VC) for OSVVM. The model has the following features:
 
-* Is a co-simulated VC, with a PCIe C model
+* Co-simulated Verification Component, integrating a PCIe C model
 * Supports link widths &times;1, &times;2, &times;4, &times;8 and &times;16
 * Internal memory space model accessed with incoming memory write/read requests
     * Can be disabled so transations passed to user test code
 * Internal configuration space model accessed with incoming configuration space write/read requests
     * Can be disabled so transations passed to user test code
-* Auto-generation of read completions (can be disabled)
-* Auto-generation of 'unsupported' completions (can be disabled)
-* Auto-generation of Acks/Naks (can be disabled)
-* Auto-generation of Flow control (can be disabled)
-* Auto-generation of Skip OS (can be disabled)
+* Auto-generation features (can be individually disabled)
+    * read completions
+    * 'unsupported' completions
+    *  Acks/Naks
+    * Flow control
+    * Skip OS
 * User generation of all TLP types
     * Memory Reads/Writes
     * Config Reads/Writes
     * IO Reads/Writes
     * Messages
     * Completions
+* User generation of all DLLP types
+    * ACK/NAK
+    * Init and Update flow control
+    * Power managment
+    * Vendor specific
+* User generation of PHY OS and TS traffic
+    * TS1 and TS2 training sequences
+    * Ordered sets (NFTS, IDL, SKP)
 * External generation of training sequences
     * Via supplied demonstation LTSSM C code as partial implementation
 * 8b10b encoding and decoding (can be disabled)
@@ -43,11 +54,18 @@ PCIe GEN1/GEN2 verification component (VC) for OSVVM. The model has the followin
 
 ## The Test Benches
 
-There are three test benches for the PCIe VC that demonstrate the VC main configurations. The first, `TbPcie`, uses the VC in a "classic " manner with an "upstream" requester" and "downstream" responder driven by VHDL test programs. The second, `TbPcieAutoeEp` uses the VC with the downstream VC as and endpoint configured for auto-completion and internal memory models. The last, `TbPcieSerial` is similar to the auto-completion test bench, but uses the serialisation wrapper VHDL for single bit lanes. The diagram below shows the "classic" testbench structure, but all have a similar architecture. Certain configurations can be controlled from constant definitions at the top of the test bench files (e.g. `TbPcie.vhd`), such as link width PIPE or 8b10b encoded data, and others.
+There are three common test benches for the PCIe VC that demonstrate the VC main configurations. The first, `TbPcie`, uses the VC in a "classic " manner with an "upstream" requester" and "downstream" responder driven by VHDL test programs. The second, `TbPcieAutoeEp` uses the VC with the downstream VC as and endpoint configured for auto-completion and internal memory models. The last, `TbPcieSerial` is similar to the auto-completion test bench, but uses the serialisation wrapper VHDL for single bit lanes. The diagram below shows the "classic" testbench structure, but all have a similar architecture. Certain configurations can be controlled from constant definitions at the top of the test bench files (e.g. `TbPcie.vhd`), such as link width PIPE or 8b10b encoded data, and others.
 
 <p align=center>
 <img src="images/pcie_tb.png" width=800>
 </p>
+
+In addition, for the Questa and Riviera-PRO simulators, there is a test bench that instantiates and drives the Quartus generated simulation model for the _Altera Cyclone V Hard IP for PCI Excpress_, as shown in the diagram below. This testbench does link training from electrical idle to L0 "Link Up" state, initialises flow control for VC0, inspects BAR for size and address, sets to an address offset and enables the link. The PCI configuration space registers are then inspected and printed out before doing some memory writes and readbacks with verification.
+
+<p align=center>
+<img src="images/alt_pcie_osvvm_tb.png" width=800>
+</p>
+
 
 ### Running the Tests
 
@@ -56,6 +74,5 @@ To build the VC model and run the tests from a clean simulation directory the fo
 ```
 source <path to OsvvmLibraries>/Scripts/StartUp.tcl
 source <path to OsvvmLibraries>/OsvvmLibraries.pro
-build  <path to OsvvmLibraries>/PCIe/testbench
-build  <path to OsvvmLibraries>/PCIe/testbench/tests.pro
+build  <path to OsvvmLibraries>/CoSimPCIe/RunAllTests.pro
 ```

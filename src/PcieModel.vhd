@@ -13,6 +13,7 @@
 --
 --  Revision History:
 --    Date      Version    Description
+--    06/2026   2026.08    Added support for DLLP and PHY traffic processing
 --    07/2025   2026.01    Initial version
 --
 --
@@ -71,7 +72,7 @@ port (
   -- Globals
   Clk         : in   std_logic ;
   nReset      : in   std_logic ;
-  
+
   ClkOut      : out  std_logic ;
   Gen2ClkSel  : out  std_logic := '0' ;
 
@@ -116,7 +117,7 @@ architecture behavioral of PcieModel is
   signal   LinkOutVec    : LinkType(0 to LINKWIDTH-1)(LANEWIDTH-1 downto 0) := (others => (others => '0')) ;
 
   signal   ClkDiv2       : std_logic                                        := '0' ;
-  
+
 begin
 
   ClockCounter : process(Clk)
@@ -154,16 +155,16 @@ begin
   ------------------------------------------------------------
   -- Clock control
   ------------------------------------------------------------
-  
+
   g_CLKMUX : if GEN2_CLK generate
-  
+
     p_CLKDIV2 : process (Clk)
     begin
-      if Clk'event and Clk = '1' then 
+      if Clk'event and Clk = '1' then
         ClkDiv2                 <= not ClkDiv2 ;
       end if ;
     end process p_CLKDIV2 ;
-    
+
     clkmux_i : clkmux
     port map
     (
@@ -173,42 +174,35 @@ begin
         clkout                   => ClkOut,
         sel                      => Gen2ClkSel
     );
-    
+
   else generate
-    
+
     ClkOut                      <= Clk ;
-    
+
   end generate ;
-  
+
   ------------------------------------------------------------
   --  Transaction Dispatcher
   ------------------------------------------------------------
   TransactionDispatcher : process
 
-    variable VPData            : integer := 0 ;
-    variable VPDataHi          : integer := 0 ;
-    variable UnusedVPDataWidth : integer := 0 ;
-    variable VPAddr            : integer := 0 ;
-    variable UnusedVPAddrHi    : integer := 0 ;
-    variable UnusedVPAddrWidth : integer := 0 ;
-    variable VPOp              : integer := 0 ;
-    variable UnusedVPBurstSize : integer := 0 ;
-    variable UnusedVPTicks     : integer := 0 ;
-    variable VPDone            : integer := 0 ;
-    variable VPError           : integer := 0 ;
-    variable UnusedVPParam     : integer := 0 ;
-    variable UnusedVPStatus    : integer := 0 ;
-    variable UnusedVPCount     : integer := 0 ;
-    variable UnusedCount       : integer := 0 ;
-    variable UnusedIntReq      : integer := 0 ;
+    variable VPData            : integer                        := 0 ;
+    variable VPDataHi          : integer                        := 0 ;
+    variable VPAddr            : integer                        := 0 ;
+    variable VPOp              : integer                        := 0 ;
+    variable VPDone            : integer                        := 0 ;
+    variable VPError           : integer                        := 0 ;
 
-    variable Delta             : boolean               := false;
-    variable WE                : boolean               := false;
-    variable LinkOffset        : integer               := 0;
-    variable DataLoBits        : std_logic_vector (3 downto 0) := (others => '0') ;
+    variable Delta             : boolean                        := false;
+    variable WE                : boolean                        := false;
+    variable LinkOffset        : integer                        := 0;
+    variable DataLoBits        : std_logic_vector ( 3 downto 0) := (others => '0') ;
 
     variable RdData            : std_logic_vector (63 downto 0) := (others => '0') ;
     variable WrData            : std_logic_vector (63 downto 0) := (others => '0') ;
+
+    variable TransUnavail      : boolean ;
+    variable NoAck             : boolean ;
 
   begin
 
@@ -220,12 +214,8 @@ begin
       VPData   := to_integer(signed(RdData(31 downto  0))) ;
       VPDataHi := to_integer(signed(RdData(63 downto 32))) ;
 
-      -- Fetch the next transaction from the model
-      VTrans (NODE_NUM,     UnusedIntReq,      UnusedVPStatus,  UnusedVPCount, UnusedCount,
-              VPData,       VPDataHi,          UnusedVPDataWidth,
-              VPAddr,       UnusedVPAddrHi,    UnusedVPAddrWidth,
-              VPOp,         UnusedVPBurstSize, UnusedVPTicks,
-              VPDone,       VPError,           UnusedVPParam) ;
+      -- Fetch the next access from the PCIe model
+      PcieGetAccessFromModel (NODE_NUM, VPData, VPDataHi, VPAddr, VPOp, VPDone, VPError) ;
 
       Delta := AddressBusOperationType'val(VPOp) = READ_OP  or    -- treat all reads as asynchronous (delta-cycle) accesses
                AddressBusOperationType'val(VPOp) = ASYNC_WRITE ;
@@ -233,27 +223,28 @@ begin
       WE    := AddressBusOperationType'val(VPOp) = WRITE_OP or
                AddressBusOperationType'val(VPOp) = ASYNC_WRITE ;
 
+      -- Memory map the access to the VC state
       case VPAddr is
 
         -- -----------------------------------------------------
-        -- Process parameters
+        -- Process generics
         -- -----------------------------------------------------
 
-        when NODENUMADDR           => RdData := std_logic_vector(to_unsigned(NODE_NUM, RdData'length)) ;
+        when NODENUMADDR           => RdData := std_logic_vector(to_unsigned(NODE_NUM,  RdData'length)) ;
         when LANESADDR             => RdData := std_logic_vector(to_unsigned(LINKWIDTH, RdData'length)) ;
-        when EP_ADDR               => RdData := 64x"00000001" when ENDPOINT else 64x"00000000";
-        when REQID_ADDR            => RdData := std_logic_vector(to_unsigned(REQ_ID, RdData'length)) ;
-        when DISABLE_8B10B_ADDR    => RdData := 64x"00000001" when PIPE else 64x"00000000";
+        when REQID_ADDR            => RdData := std_logic_vector(to_unsigned(REQ_ID,    RdData'length)) ;
+        when EP_ADDR               => RdData := 64x"00000001" when ENDPOINT           else 64x"00000000";
+        when DISABLE_8B10B_ADDR    => RdData := 64x"00000001" when PIPE               else 64x"00000000";
         when DISABLE_SCRAMBLE_ADDR => RdData := 64x"00000001" when DISABLE_SCRAMBLING else 64x"00000000";
-        when EN_ECRC_ADDR          => RdData := 64x"00000001" when EN_TLP_REQ_DIGEST else 64x"00000000";
-        when INITPHY_ADDR          => RdData := 64x"00000001" when ENABLE_INIT_PHY else 64x"00000000";
-        when ENABLE_AUTO_ADDR      => RdData := 64x"00000001" when ENABLE_AUTO     else 64x"00000000";
-        
-        when GEN2_CLK_ADDR         => 
+        when EN_ECRC_ADDR          => RdData := 64x"00000001" when EN_TLP_REQ_DIGEST  else 64x"00000000";
+        when INITPHY_ADDR          => RdData := 64x"00000001" when ENABLE_INIT_PHY    else 64x"00000000";
+        when ENABLE_AUTO_ADDR      => RdData := 64x"00000001" when ENABLE_AUTO        else 64x"00000000";
+
+        when GEN2_CLK_ADDR         =>
             if WE then
               Gen2ClkSel <= '1' when (VPData mod 2) = 1 else '0' ;
             end if ;
-            
+
             RdData(0) := Gen2ClkSel;
             RdData(1) := '1' when GEN2_CLK else '0';
             RdData(63 downto 3) := (others => '0');
@@ -329,7 +320,18 @@ begin
 
         when GETNEXTTRANS =>
 
-          RdData := SafeResize(std_logic_vector(to_unsigned(AddressBusOperationType'pos(TransRec.Operation), 32)), RdData'length) ;
+          PcieTryWaitForTransaction (
+               Clk          => ClkOut,
+               Rdy          => TransRec.Rdy,
+               Ack          => TransRec.Ack,
+               TransUnavail => TransUnavail
+            ) ;
+
+          if TransUnavail then
+            RdData := (others=> '1');
+          else
+            RdData := SafeResize(std_logic_vector(to_unsigned(AddressBusOperationType'pos(TransRec.Operation), 32)), RdData'length) ;
+          end if;
 
         when GETINTTOMODEL =>
 
@@ -426,14 +428,22 @@ begin
 
           RdData(7 downto 0) := Pop(TransRec.ReadBurstFifo) ;
 
+        when PUSHRDATA32 =>
+
+          WrData(31 downto 0) := SafeResize(std_logic_vector(to_signed(VPData, 32)), 32) ;
+
+          Push(TransRec.ReadBurstFifo, WrData(31 downto 0)) ;
+
+        when POPRDATA32 =>
+
+          RdData(31 downto 0) := Pop(TransRec.ReadBurstFifo) ;
+
         when ACKTRANS =>
 
           if WE then
-            WaitForTransaction(
-               Clk      => ClkOut,
-               Rdy      => TransRec.Rdy,
-               Ack      => TransRec.Ack
-            ) ;
+
+            FinishTransaction (TransRec.Ack) ;
+
           end if ;
 
         -- -----------------------------------------------------
